@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="{% static 'css/game.css' %}">
   </head>
   <body>
-    <form action="" method="post">
+    <form method="post">
       {% csrf_token %}
       <table>
         {% for goban_row_list in goban_list %}
   　    <tr>
           {% for goban_column in goban_row_list %}
             {% if goban_column == 0 %}
-              <td><button id = {{forloop.parentloop.counter0}}{{forloop.counter0}}></button></td>
+              <td><button type="submit" name = "id" value = {{forloop.parentloop.revcounter0}}{{forloop.counter0}}></button></td>
             {% else %}
               {% if goban_column == 1 %}
                 <td><button class="player1" disabled="disabled"></button></td>

@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def display(request):
 
-    print(request)
+    print(request.POST)
 
     goban_list = [[0, 0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 0, 0],
